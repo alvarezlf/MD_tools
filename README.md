@@ -21,5 +21,6 @@ Given a trajectory file with Wannier centers, separates the atoms from the Wanni
 ## xyz2cpmd
 Two scripts are provided. mol_center centers molecule to a given cell size. cpmdformat takes the coordinates in a file and convert them to CPMD format (X Y Z At in atomic units)
 
+---
 Have a nice day~  
 L. Álvarez.
