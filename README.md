@@ -5,7 +5,7 @@ Set of scripts created to analyze and manipulate data obtained from CPMD calcula
 Plot the energy from CPMD calculations. The options are -cpmd (Car-Parrinello MD, default), -nose (Nosé-Hoover thermostat with corrected energies), -bomd (Born-Oppenheimer MD).
 ## heat
 Contains scripts to calculate the velocity and temperature of specific atoms, calculated as  
-$$ \frac{mv^2}{3 Nk} = T $$
+$$\frac{mv^2}{3 Nk} = T$$
 
 It may differs from the overall temperature given in the outputs.
 ## overlapper
