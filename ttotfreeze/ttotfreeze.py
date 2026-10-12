@@ -21,21 +21,9 @@ def print_coords(l1, l2, coords_new):
     print(l1)
     print(l2)
     for i in coords_new:
-        print(f"      {i[0]:<2}{i[1]:>12}{i[2]:>12}{i[3]:>12}")
+        print(f"      {i[0]:<2}{i[1]:>12.4f}{i[2]:>12.4f}{i[3]:>12.4f}")
 
-def ttotfreze():
-    import numpy as np
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('trajectory', 
-                        type=str, 
-                        help='Path to trajectory file in .xyz format')
-    parser.add_argument('ID', 
-                        type=int, 
-                        help='ID of the target atom')
-    args = parser.parse_args()
-    
+def ttotfreze():    
     traj_N, traj_S = get_metadata(args.trajectory)
     if args.ID > traj_N or args.ID <= 0:
         print("Wrong ID")
@@ -48,6 +36,18 @@ def ttotfreze():
     
 
 if __name__=='__main__':
+    import numpy as np
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('trajectory', 
+                        type=str, 
+                        help='Path to trajectory file in .xyz format')
+    parser.add_argument('ID', 
+                        type=int, 
+                        help='ID of the target atom')
+    args = parser.parse_args()
+    
     ttotfreze()
     
 # ~ Have a nice day ~
