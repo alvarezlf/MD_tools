@@ -2,7 +2,7 @@
 Set of scripts created to analyze and manipulate data obtained from CPMD calculations focusing on the energy and trajectory files.
 
 ## enerplot
-Plot the energy from CPMD calculations. The options are -cpmd (Car-Parrinello MD, default), -nose (Nosé-Hoover thermostat with corrected energies), -bomd (Born-Oppenheimer MD).
+Plot the energy from CPMD calculations. The options are `-cpmd` (Car-Parrinello MD, default), `-nose` (Nosé-Hoover thermostat with corrected energies), `-bomd` (Born-Oppenheimer MD).
 ## heat
 Contains scripts to calculate the velocity and temperature of specific atoms, calculated as  
 $$\frac{mv^2}{3 Nk} = T$$
@@ -18,8 +18,14 @@ Recalculate atomic coordinates relative to a given atom obtaining a "freeze" eff
 Given a list of atoms, divides the specified trajectory file into a "file-main.xyz" and "file-side.xyz". Useful to separate reactive molecules from the solvent. An input template is included.
 ## ttotw
 Given a trajectory file with Wannier centers, separates the atoms from the Wannier centers creating "file-atoms.xyz" and "file-wanc.xyz" files. Useful in the generation of movies.
+## xtractstep.sh
+returns the given step from a trajectory file. Usage:
+```
+xtractstep.sh trajectory_file.xyz number_atoms step
+```
+
 ## xyz2cpmd
-Two scripts are provided. mol_center centers molecule to a given cell size. cpmdformat takes the coordinates in a file and convert them to CPMD format (X Y Z At in atomic units)
+Two scripts are provided. `mol_center` centers molecule to a given cell size. `cpmdformat` takes the coordinates in a file and convert them to CPMD format (X Y Z At in atomic units)
 
 ---
 Have a nice day~  
